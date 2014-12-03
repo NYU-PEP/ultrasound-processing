@@ -14,14 +14,14 @@ if target_directory != '':
 else:
     target_directory = os.getcwd()
 
-temp = open(vidfile,'r')
+temp = open(vidfile,'rU')
 
 files = temp.readlines()
 
 temp.close()
 
 for f in files:
-  f = f.split(',')
+  f = f.rstrip().split(',')
   start = float(f[2])
   stop = float(f[3])
   dur = stop - start
