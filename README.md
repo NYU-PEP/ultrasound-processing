@@ -17,4 +17,4 @@ The scripts extractframes.py and extractaudio.py assume that you have python and
   - [Download](http://ffmpegmac.net/)
   - Place the ffmpeg directory somewhere your computer can find it. One option is moving the ffmpeg directory to /usr/local/bin which you can do by running `sudo cp -r path/to/ffmpeg /usr/local/bin/ffmpeg`.
 
-concontateate.py works with the output of Edgetrak
+concontateate.py works with the output of Edgetrak. It assumes a particular file-naming convention which is as follows: 
