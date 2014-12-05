@@ -17,7 +17,7 @@ if target_directory != '':
 else:
     target_directory = os.getcwd()
 
-temp = open(vidfile,'r')
+temp = open(vidfile,'rU')
 
 files = temp.readlines()
 
