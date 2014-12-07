@@ -50,6 +50,7 @@ parser.add_argument("-f", "--format", choices=["tsv","csv"], help="The output fo
 parser.add_argument("-a", "--all-underscores", help="Separate filenames using all underscores and store each field in a separate column. Without this flag, the program"
                     " expects a SUBJECT_REPETITION_WORD_FRAME format, where WORD may contain extra underscores.", action="store_true")
 parser.add_argument("--suffix", help="The suffix on the results file name which looks like SUBJECT_SUFFIX.{csv,txt}. Defaults to \"results\".", default="results")
+parser.add_argument("-H", "--no_header", help="Do not output a header row. Only used in the standard format, as -a has no header by default.", action="store_true")
 args = vars(parser.parse_args())
 
 files = [n for n in os.listdir(args["directory"]) if re.search(r"\.con$",n)] # ls *.con
@@ -71,6 +72,8 @@ for f in files:
         else:
             fn = fn + ".txt"
         outfiles[fnattr[0]] = open(fn, "wt")
+        if (not args["no_header"]) and (not args["all_underscores"]):
+            outfiles[fnattr[0]].write("X\tY\tword\ttime.frame\trepetition\n")
 
     for i in range(len(xy)): # print out all the xy's to the subject's results file
         info = [xy[i]["x"], xy[i]["y"]]
