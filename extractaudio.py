@@ -7,7 +7,7 @@ parser.add_argument('files',metavar='U',type=str,nargs=2,help='csv file with fil
 args = parser.parse_args()
 vidfile,target_directory = args.files
 
-if !os.path.isdir(target_directory):
+if not os.path.isdir(target_directory):
     os.mkdir(target_directory)
 
 print "opening",vidfile
