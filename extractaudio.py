@@ -26,7 +26,7 @@ temp.close()
 for f in files:
   try:
     print 'extracting frames from %s'%f[0]
-    new_command = "ffmpeg -v 0 -i %s -vn -ac 1 -f wav %s%s.wav" %(f,target_directory, f.strip(".avi")
+    new_command = "ffmpeg -v 0 -i %s -vn -ac 1 -f wav %s%s.wav" %(f,target_directory, f.strip(".avi"))
     #new_command = "ffmpeg -v 0 -r 30 -i %s -t %s -ss %s %s%s_%s-%%3d.jpg" %(f[0], dur, f[2], target_directory, f[0].strip(".avi"), f[1])
     #print new_command
     os.system(new_command)
