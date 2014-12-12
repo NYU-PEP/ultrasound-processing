@@ -16,7 +16,8 @@ The scripts extractframes.py and extractaudio.py assume that you have python and
 * To install on a Mac:
   - [Download](http://ffmpegmac.net/)
   - extract from the zip file and re-name the folder ffmpeg
-  - Place the ffmpeg directory somewhere your computer can find it. One option is moving the ffmpeg directory to /usr/local/bin which you can do by running `sudo cp -r path/to/ffmpeg /usr/local/bin/ffmpeg`.
+  - Place the ffmpeg directory somewhere your computer can find it. One option is moving the ffmpeg directory to /usr/local/bin which you can do by running `sudo cp -r path/to/ffmpeg /usr/local/bin/ffmpeg` in terminal.
+* Alternative Mac installation (may be buggy): run `sh ffmpeg_install_mac.sh` in terminal. This will automatically download and move files around for you. It will ask for a password while running.
 
 concontateate.py works with the output of [Edgetrak](http://speech.umaryland.edu/edgetrak.html). It assumes a particular file-naming convention for the .con files which is as follows:  
 `SUBJECT_REPETITION_WORD_FRAME`  
